@@ -1,0 +1,403 @@
+/* General CSS */
+/* --------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #002478;
+  --main-text-color: #ffffff;
+
+  --text-smallest: 0.6rem;
+  --text-smaller: 0.8rem;
+  --text-normal: 1rem;
+  --text-bigger: 1.2rem;
+  --text-biggest: 1.5rem;
+}
+
+a {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+html {
+  min-height: 100%;
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+body {
+  background: linear-gradient(to top right, #002478, #3cc1d4);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: var(--text-bigger);
+  color: var(--main-text-color);
+  margin: 0;
+  padding: 3rem 2rem 0 2rem;
+  min-height: 100%;
+  text-shadow: 1px 1px var(--main-bg-color);
+  animation: bluronstart 1s ease-in-out;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1200px;
+  margin-top: 12rem;
+}
+
+header {
+  background-color: var(--main-bg-color);
+  width: 100%;
+  max-width: 1200px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text-normal);
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+
+ul {
+  background-color: var(--main-bg-color);
+  box-shadow: 0.4rem 0.4rem 0.8rem var(--main-bg-color);
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  width: 100%;
+  height: 3rem;
+  position: relative;
+}
+
+img {
+  box-shadow: 0.4rem 0.4rem 0.8rem var(--main-bg-color);
+}
+
+li {
+  font-size: var(--text-bigger);
+  padding: 0.2rem;
+}
+
+li:hover,
+li:active {
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  text-shadow: 1px 1px var(--main-text-color);
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+section {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+hr {
+  border: 0.1rem solid var(--main-text-color);
+  box-shadow: 0.1rem 0.1rem 0.1rem var(--main-bg-color);
+  border-radius: 5px;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.display-none {
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.loading-spinner {
+  border: 1rem solid var(--main-text-color);
+  border-top: 1rem solid var(--main-bg-color);
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  animation: spin 2s linear infinite;
+}
+
+.error {
+  color: red;
+  background-color: white;
+  font-weight: 600;
+  text-shadow: none;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 780px) {
+  section {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  main {
+    margin-top: 7rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  main {
+    margin-top: 4rem;
+  }
+}
+
+@keyframes bluronstart {
+  0% {
+    opacity: 0;
+    filter: blur(16px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Footer CSS */
+/* --------------------------------*/
+.footer-links-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.footer-link {
+  padding-inline: 0.3rem;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  text-shadow: 1px 1px var(--main-text-color);
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: var(--text-smaller);
+  animation: slideintext 2s ease-in-out;
+}
+
+.copyright-sign {
+  padding-right: 0.2rem;
+}
+
+/* Header CSS */
+/* --------------------------------*/
+nav {
+  position: fixed;
+  background-color: var(--main-bg-color);
+  max-height: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  top: 0;
+  z-index: 150;
+  border-radius: 0.3rem;
+}
+
+.german-flag,
+.gb-flag {
+  max-width: 2rem;
+  max-height: 1.5rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.banner-wrapper {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.banner {
+  position: absolute;
+  top: 0;
+  cursor: initial;
+  max-width: 100%;
+  max-height: 11rem;
+  z-index: 100;
+}
+.is-active {
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  text-shadow: 1px 1px var(--main-text-color);
+  border-radius: 0.3rem;
+}
+
+.burger-menu {
+  display: none;
+  max-width: 2rem;
+  max-height: 1.5rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.burger-menu-content {
+  box-shadow: -0.4rem 0.4rem 0.8rem var(--main-bg-color);
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+@media only screen and (max-width: 1280px) {
+  nav {
+    max-width: 100%;
+    left: 0;
+  }
+  .banner {
+    min-width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .normal-menu {
+    display: none;
+  }
+
+  .banner {
+    position: fixed;
+    top: 3rem;
+    cursor: initial;
+    max-width: 100%;
+    max-height: 11rem;
+    z-index: 100;
+  }
+
+  .nav-mobile {
+    display: initial;
+  }
+
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    min-width: 2rem;
+    min-height: 2rem;
+    top: 0.5rem;
+    right: 0.8rem;
+    z-index: 120;
+  }
+
+  .burger-menu-content {
+    background-color: var(--main-bg-color);
+    position: fixed;
+    right: 0;
+    top: 3rem;
+    flex-direction: column;
+    gap: 0.3rem;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 1rem;
+    padding-right: 0.7rem;
+    z-index: 120;
+    animation: bluronstart 0.5s;
+  }
+
+  .german-flag {
+    display: block;
+    position: fixed;
+    max-width: 2rem;
+    max-height: 1.5rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    top: 0.7rem;
+    left: 0.8rem;
+    z-index: 120;
+  }
+
+  .gb-flag {
+    display: block;
+    position: fixed;
+    max-width: 2rem;
+    max-height: 1.5rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    top: 0.7rem;
+    left: 5rem;
+    z-index: 120;
+  }
+}

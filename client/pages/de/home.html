@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyCat Games</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <script src="scripts/global.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="normal-menu">
+        <ul>
+          <a href="/de"> <li class="is-active">Home</li> </a
+          ><span>|</span>
+          <a href="/de/products"> <li>Spiele & Tools</li> </a
+          ><span>|</span>
+          <a href="/de/team"> <li>SkyCat Games</li> </a
+          ><span>|</span>
+          <a href="/de/contact"> <li>Kontakt</li> </a
+          ><span>|</span>
+          <img
+            src="svg/de.svg"
+            alt="german flag"
+            class="german-flag"
+            onclick="changeLang('de')" />
+          <img
+            src="svg/gb.svg"
+            alt="great britain flag"
+            class="gb-flag"
+            onclick="changeLang('en')" />
+        </ul>
+      </nav>
+      <nav class="nav-mobile">
+        <ul>
+          <img
+            class="burger-menu"
+            src="svg/menu.svg"
+            alt="open menu button"
+            onclick="toggleHeaderBurgerMenu()" />
+          <div id="burgerMenuList" class="display-none">
+            <a href="/" onclick="toggleHeaderBurgerMenu()">
+              <li>Home</li>
+            </a>
+            <a href="/gamesandtools" onclick="toggleHeaderBurgerMenu()">
+              <li>Spiele & Tools</li>
+            </a>
+            <a href="/skycatgames" onclick="toggleHeaderBurgerMenu()">
+              <li>SkyCat Games</li>
+            </a>
+            <a href="/contact" onclick="toggleHeaderBurgerMenu()">
+              <li>Kontakt</li>
+            </a>
+          </div>
+          <img
+            src="svg/de.svg"
+            alt="german flag"
+            class="german-flag"
+            onclick="changeLang('de')" />
+          <img
+            src="svg/gb.svg"
+            alt="great britain flag"
+            class="gb-flag"
+            onclick="changeLang('en')" />
+        </ul>
+      </nav>
+
+      <div class="banner-wrapper">
+        <img class="banner" src="img/banner.webp" alt="skycat games banner" />
+      </div>
+    </header>
+
+    <main>
+      <h1>DE Home</h1>
+    </main>
+
+    <footer v-if="defaults">
+      <div class="footer-links-wrapper">
+        <a href="/impressum" class="footer-link"><span>Impressum</span></a>
+        <a
+          href="https://www.instagram.com/skycatgames/"
+          target="_blank"
+          class="footer-link"
+          ><span>Instagram</span></a
+        >
+        <a
+          href="https://twitter.com/skycatgames"
+          target="_blank"
+          class="footer-link"
+          ><span>Twitter</span></a
+        >
+        <a
+          href="https://www.twitch.tv/stromsky_skycat"
+          target="_blank"
+          class="footer-link"
+          ><span>Twitch</span></a
+        >
+        <a href="https://discord.gg/tBnfKns" target="_blank" class="footer-link"
+          ><span>Discord</span></a
+        >
+      </div>
+      <div class="copyright">
+        <span class="copyright-sign">&copy</span><span>SkyCat Games 2024</span>
+      </div>
+    </footer>
+  </body>
+</html>

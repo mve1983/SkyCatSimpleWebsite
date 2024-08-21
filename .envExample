@@ -1,0 +1,7 @@
+
+EMAIL_HOST = smtp.yourprovider.com
+EMAIL_PORT = 587
+EMAIL_SECURE = false #activate if port 465 with SSL, keep it false for port 587 with TLS/STARTTLS
+EMAIL_USER_LOGIN_NAME = testuser
+EMAIL_USER_LOGIN_PW = testpw
+EMAIL_USER_LOGIN_EMAIL = testuser@yourprovider.com
